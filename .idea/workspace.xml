@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="de92017d-2b84-43cf-a223-4f6df67fff53" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2i5XNI2mGw3mUFhsw7FHLyWk18F" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Remote JVM Debug.debugger.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/246724/Documents/vida2.0-code-base/hero_adobe_ev&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="debugger" type="Remote">
+      <module name="mysite" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="de92017d-2b84-43cf-a223-4f6df67fff53" name="Changes" comment="" />
+      <created>1718781369296</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718781369296</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mysite/core/src/main/java/com/mysite/core/models/PageNodeModel.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mysite/core/src/main/java/com/mysite/core/models/PageNodeModel.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mysite/core/src/main/java/com/mysite/core/models/PageNodeModel.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mysite/core/src/main/java/com/mysite/core/models/PageNodeModel.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mysite/core/src/main/java/com/mysite/core/models/PageNodeModel.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mysite/core/src/main/java/com/mysite/core/models/ChildNodeModel.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mysite/core/src/main/java/com/mysite/core/models/ChildNodeModel.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mysite/core/src/main/java/com/mysite/core/models/ChildNodeModel.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mysite/core/src/main/java/com/mysite/core/models/ChildNodeModel.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.apache.sling.resourceresolver.impl.ResourceResolverImpl" memberName="context" />
+        <PinnedItemInfo parentTag="com.mysite.core.models.PageNodeModel" memberName="resource" />
+        <PinnedItemInfo parentTag="com.day.cq.wcm.core.impl.TemplatedResourceImpl" memberName="children" />
+        <PinnedItemInfo parentTag="com.mysite.core.models.ChildNodeModel" memberName="request" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>

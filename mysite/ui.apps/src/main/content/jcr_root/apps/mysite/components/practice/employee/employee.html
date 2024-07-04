@@ -1,0 +1,20 @@
+
+<h3>Getting values from sling model</h3>
+<sly data-sly-use.example="com.mysite.core.models.EmployeeModel">
+<div>Employee First Name : ${example.firstName}</div>
+<div>Employee Last Name : ${example.lastName}</div>
+<div>Work Location : ${example.isInOffice ? 'Work from Office' : 'Work from Home'}</div>
+</sly>
+
+<h3>Getting Current Page Properties</h3>
+<sly data-sly-use.pageModel="com.mysite.core.models.PagePropertyModel">
+<div>
+<div>Author Page Title: ${pageModel.pageTitle @ context='text'}</div>
+<div>Page Description: ${pageModel.pageDescription @ context='text'}</div>
+<div>Page Modified by: ${pageModel.pageModified @ context='text'}</div>
+<div>Page Title: ${pageModel.PageTitles @ context='text'}</div>
+</div>
+</sly>
+
+
+

@@ -1,0 +1,27 @@
+
+
+<!--/* <sly data-sly-use.pageNodeModel="com.mysite.core.models.PageNodeModel">
+    <div data-sly-list.childPages="${pageNodeModel.childPages}">
+        <ul data-sly-list.child="${childPages}">
+            <li>Page Titles: ${child.title}</li>
+        </ul>
+    /div>
+</sly> */-->
+
+<!--/* <sly data-sly-use.industryModel="package com.mysite.core.models.ChildNodeModel">
+
+<h2>${industryModel.linkPath}</h2>
+
+<li>
+${industryModel.childTitle}
+</li> */-->
+
+<sly data-sly-use.model="com.mysite.core.models.ChildNodeModel">
+    <div>
+        <h2>${model.linkLabel}</h2>
+        <p>${model.linkPath}</p>
+        <li>${model.childTitle}</li>
+    </div>
+</sly>
+
+
