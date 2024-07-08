@@ -46,8 +46,10 @@ public class OnlyChildNodes extends SlingAllMethodsServlet {
                         Node contentNode = childNode.getNode("jcr:content");
                         // Get the page title
                         String pageTitle = contentNode.hasProperty("jcr:title") ? contentNode.getProperty("jcr:title").getString() : "No Title";
+
                         resp.getWriter().println("Child Page Path: " + childNode.getPath());
                         resp.getWriter().println("Page Title: " + pageTitle);
+                        
                     } catch (RepositoryException e) {
                         resp.getWriter().println("Error getting child node path: " + e.getMessage());
                     }
