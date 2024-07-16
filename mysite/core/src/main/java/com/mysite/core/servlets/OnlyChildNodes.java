@@ -13,6 +13,8 @@ import javax.servlet.ServletException;
 import java.io.IOException;
 import java.util.Iterator;
 import org.osgi.service.component.annotations.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.osgi.framework.Constants;
 import org.apache.sling.api.servlets.HttpConstants;
 
@@ -26,11 +28,15 @@ import org.apache.sling.api.servlets.HttpConstants;
 )
 public class OnlyChildNodes extends SlingAllMethodsServlet {
 
+    private static final Logger LOG = LoggerFactory.getLogger(OnlyChildNodes.class);
+
     @Override
     protected void doGet(SlingHttpServletRequest req, SlingHttpServletResponse resp) throws ServletException, IOException {
         ResourceResolver resourceResolver = req.getResourceResolver();
         // Get the parent resource
         Resource parentResource = resourceResolver.getResource("/content/mysite/us/en");
+        LOG.info("\n=========ParenetResource=======");
+        LOG.info("\nParent Resource Path : {}",parentResource);
 
         if (parentResource != null) {
             resp.getWriter().println("Parent Path: " + parentResource.getPath());
@@ -49,14 +55,16 @@ public class OnlyChildNodes extends SlingAllMethodsServlet {
 
                         resp.getWriter().println("Child Page Path: " + childNode.getPath());
                         resp.getWriter().println("Page Title: " + pageTitle);
+                        LOG.info("\nChild Page Path : {}, Page Title : {}",childNode.getPath(),pageTitle);
                         
                     } catch (RepositoryException e) {
-                        resp.getWriter().println("Error getting child node path: " + e.getMessage());
+                        LOG.error("Error getting child node path:{}",e);
                     }
                 }
             }
         } else {
-            resp.getWriter().println("Parent resource not found.");
+            // resp.getWriter().println("Parent resource not found.");
+            LOG.error("\n-------Parent resource not found.---------");
         }
     }
 }
