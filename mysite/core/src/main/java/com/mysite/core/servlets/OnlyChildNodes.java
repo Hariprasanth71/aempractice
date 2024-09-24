@@ -11,7 +11,10 @@ import javax.jcr.RepositoryException;
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+
 import org.osgi.service.component.annotations.Component;
 import org.osgi.framework.Constants;
 import org.apache.sling.api.servlets.HttpConstants;
@@ -28,11 +31,14 @@ public class OnlyChildNodes extends SlingAllMethodsServlet {
 
     @Override
     protected void doGet(SlingHttpServletRequest req, SlingHttpServletResponse resp) throws ServletException, IOException {
+        Resource resource = req.getResource();
         ResourceResolver resourceResolver = req.getResourceResolver();
         // Get the parent resource
         Resource parentResource = resourceResolver.getResource("/content/mysite/us/en");
 
         if (parentResource != null) {
+            List<String> childPaths = new ArrayList<>();
+            List<String> pageTitles = new ArrayList<>();
             resp.getWriter().println("Parent Path: " + parentResource.getPath());
             // Iterate through the child resources
             Iterator<Resource> childResources = parentResource.listChildren();
@@ -46,6 +52,10 @@ public class OnlyChildNodes extends SlingAllMethodsServlet {
                         Node contentNode = childNode.getNode("jcr:content");
                         // Get the page title
                         String pageTitle = contentNode.hasProperty("jcr:title") ? contentNode.getProperty("jcr:title").getString() : "No Title";
+
+                        childPaths.add(childNode.getPath());
+                        pageTitles.add(pageTitle);
+
                         resp.getWriter().println("Child Page Path: " + childNode.getPath());
                         resp.getWriter().println("Page Title: " + pageTitle);
                     } catch (RepositoryException e) {
@@ -53,6 +63,10 @@ public class OnlyChildNodes extends SlingAllMethodsServlet {
                     }
                 }
             }
+            req.setAttribute("childPaths", childPaths);
+            req.setAttribute("pageTitles", pageTitles);
+
+            req.getRequestDispatcher(resource).forward(req, resp);
         } else {
             resp.getWriter().println("Parent resource not found.");
         }

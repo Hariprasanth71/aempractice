@@ -1,3 +1,18 @@
+<sly data-sly-use.model="com.mysite.core.models.ChildPagesModel">
+    <h2>Child Node Pages</h2>
+    <ul>
+        <sly data-sly-list.childPath="${model.childPaths}">
+            <li>${childPath}</li>
+        </sly>
+    </ul>
+    <h2>Page Titles</h2>
+    <ul>
+        <sly data-sly-list.pageTitle="${model.pageTitles}">
+            <li>${pageTitle}</li>
+        </sly>
+    </ul>
+</sly>
+
 
 
 <!--/* <sly data-sly-use.pageNodeModel="com.mysite.core.models.PageNodeModel">
@@ -16,12 +31,12 @@
 ${industryModel.childTitle}
 </li> */-->
 
-<sly data-sly-use.model="com.mysite.core.models.ChildNodeModel">
+<!--/* <sly data-sly-use.model="com.mysite.core.models.ChildNodeModel">
     <div>
         <h2>${model.linkLabel}</h2>
         <p>${model.linkPath}</p>
         <li>${model.childTitle}</li>
     </div>
-</sly>
+</sly> */-->
 
 
