@@ -1,0 +1,15 @@
+<h3>Getting data from sling model</h3>
+<sly data-sly-use.msg="com.mysite.core.models.ArticleModel">
+    <p>${msg.articleName}</p>
+    <p>${'dd-MM-YYYY' @format=msg.articleDate}</p>
+    <p>${msg.articleDescription}</p>
+    <p>${msg.articleAuthorName}</p>
+</sly>
+
+<!--/* <sly data-sly-use.msg = "com.mysite.core.models.impl.ArticleModel"> */-->
+<h3>Getting data from htl</h3>
+    <p>${properties.articleName}</p>
+    <p>${'dd-MM-YYYY' @format=properties.articleDate}</p>
+    <p>${properties.articleDescription}</p>
+    <p>${properties.articleAuthorName}</p>
+<!--/* </sly> */-->
