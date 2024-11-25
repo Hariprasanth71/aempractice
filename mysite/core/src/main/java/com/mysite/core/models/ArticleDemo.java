@@ -5,5 +5,6 @@ public interface ArticleDemo {
     public int getArticleDate();
     public String getArticleDescription();
     public String getArticleAuthorName();
-//    public String getPageTitle();
+    public String getPageTitle();
+    public String getHomePageName();
 }
